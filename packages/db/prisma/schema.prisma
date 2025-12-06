@@ -11,7 +11,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
+  // url      = env("DATABASE_URL")
 }
 
 
@@ -27,8 +27,6 @@ model Website{
   userId  String
   user  User      @relation(fields: [userId], references: [id])
   ticks WebsiteTick[]
-  
-  
 }
 
 model Validator {
